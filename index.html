@@ -4,10 +4,327 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WindTunes</title>
-    <script type="module" crossorigin src="/WindTunes_App/assets/index-C0TUnked.js"></script>
-    <link rel="stylesheet" crossorigin href="/WindTunes_App/assets/index-C_J3Ao1O.css">
+    <script type="module" crossorigin src="/WindTunes_App/assets/index-Cx11hT0E.js"></script>
+    <link rel="stylesheet" crossorigin href="/WindTunes_App/assets/index-CWvFVNTe.css">
   </head>
   <body>
-    <h1 class="text-3xl font-bold underline text-red-600">    Hello world!  </h1>
+     <!-- Header -->
+    <header
+      class="bg-gray-900 text-white py-5 px-10 sm:px-20 bg-[url('https://img.freepik.com/free-vector/glowing-musical-pentagram-background-with-sound-notes_1017-31220.jpg')]"
+    >
+      <!-- App Title -->
+      <div class="flex justify-between items-center">
+        <h4 class="text-xl font-bold">WindTunes</h4>
+        <a
+          href="https://github.com/dhinakaran-Y/WindTunes_App"
+          target="_blank"
+          class="hover:text-rose-500"
+        >
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            class="fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M16 2.66666C14.249 2.66666 12.5152 3.01153 10.8976 3.6816C9.27988 4.35166 7.81003 5.33379 6.57191 6.5719C4.07143 9.07238 2.66667 12.4638 2.66667 16C2.66667 21.8933 6.49334 26.8933 11.7867 28.6667C12.4533 28.7733 12.6667 28.36 12.6667 28V25.7467C8.97334 26.5467 8.18667 23.96 8.18667 23.96C7.57334 22.4133 6.70667 22 6.70667 22C5.49334 21.1733 6.80001 21.2 6.80001 21.2C8.13334 21.2933 8.84001 22.5733 8.84001 22.5733C10 24.6 11.96 24 12.72 23.68C12.84 22.8133 13.1867 22.2267 13.56 21.8933C10.6 21.56 7.49334 20.4133 7.49334 15.3333C7.49334 13.8533 8.00001 12.6667 8.86667 11.72C8.73334 11.3867 8.26667 9.99999 9.00001 8.19999C9.00001 8.19999 10.12 7.83999 12.6667 9.55999C13.72 9.26666 14.8667 9.11999 16 9.11999C17.1333 9.11999 18.28 9.26666 19.3333 9.55999C21.88 7.83999 23 8.19999 23 8.19999C23.7333 9.99999 23.2667 11.3867 23.1333 11.72C24 12.6667 24.5067 13.8533 24.5067 15.3333C24.5067 20.4267 21.3867 21.5467 18.4133 21.88C18.8933 22.2933 19.3333 23.1067 19.3333 24.3467V28C19.3333 28.36 19.5467 28.7867 20.2267 28.6667C25.52 26.88 29.3333 21.8933 29.3333 16C29.3333 14.249 28.9885 12.5152 28.3184 10.8975C27.6483 9.27987 26.6662 7.81001 25.4281 6.5719C24.19 5.33379 22.7201 4.35166 21.1025 3.6816C19.4848 3.01153 17.751 2.66666 16 2.66666Z"
+            />
+          </svg>
+        </a>
+      </div>
+      <!-- Banner -->
+      <div class="text-center py-14 space-y-4">
+        <h3 class="text-3xl font-bold">
+          Download <span class="text-rose-500">RingTunes</span> <br />
+          <span class="text-xl">in Seconds...</span>
+        </h3>
+        <div class="relative max-w-lg mx-auto">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            class="absolute top-1 left-1 p-0.5"
+          >
+            <path
+              fill="#888888"
+              d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14z"
+            />
+          </svg>
+          <input
+            type="text"
+            placeholder="Search by artist, movie names, etc."
+            class="pl-10 pr-4 py-2 rounded outline-none w-full text-gray-600"
+          />
+        </div>
+      </div>
+    </header>
+
+    <div
+      class="my-5 mx-5 sm:mx-10 space-y-4 sm:space-y-0 flex flex-col sm:flex-row sm:space-x-10"
+    >
+      <!-- Filters -->
+      <div class="bg-gray-200 p-5 rounded shadow space-y-4 w-full sm:max-w-sm">
+        <h4 class="font-semibold">Filters</h4>
+        <div class="space-y-4">
+          <select
+            name="languages"
+            id="languages"
+            class="px-2 py-2 rounded w-full outline-none"
+          >
+            <option value="">Select Language</option>
+            <option value="english">English</option>
+            <option value="tamil">Tamil</option>
+            <option value="kannada">Kannada</option>
+          </select>
+
+          <select
+            name="artists"
+            id="artists"
+            class="px-2 py-2 rounded w-full outline-none"
+          >
+            <option value="">Select Artist</option>
+            <option value="anirudh-ravichandran">Anirudh Ravichandran</option>
+            <option value="harris-jeyaraj">Harris Jeyaraj</option>
+            <option value="yuvan-shankar-raja">Yuvan Shankar Raja</option>
+            <option value="vijay-antony">Vijay Antony</option>
+            <option value="ar-rahman">AR Rahman</option>
+          </select>
+
+          <input
+            type="text"
+            placeholder="Movie Title"
+            class="px-2 py-2 rounded w-full outline-none"
+          />
+
+          <button
+            class="px-4 py-2 rounded bg-rose-500 hover:bg-rose-600 text-white w-full font-semibold"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+
+      <!-- Contents -->
+      <div class="space-y-4">
+        <!-- Categories -->
+        <section>
+          <h4 class="font-semibold">Categories</h4>
+          <div class="flex space-x-4 mt-3">
+            <div class="w-20 h-20 sm:w-28 sm:h-28 rounded bg-gray-300"></div>
+            <div class="w-20 h-20 sm:w-28 sm:h-28 rounded bg-gray-300"></div>
+            <div class="w-20 h-20 sm:w-28 sm:h-28 rounded bg-gray-300"></div>
+          </div>
+        </section>
+
+        <!-- Browse by languages -->
+        <section>
+          <h4 class="font-semibold">Browse by languages</h4>
+          <div class="flex space-x-4 mt-3">
+            <div class="w-20 h-20 sm:w-28 sm:h-28 rounded bg-gray-300"></div>
+            <div class="w-20 h-20 sm:w-28 sm:h-28 rounded bg-gray-300"></div>
+            <div class="w-20 h-20 sm:w-28 sm:h-28 rounded bg-gray-300"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <hr class="pb-5" />
+    <!-- Popular Ringtones -->
+    <section class="mx-5 sm:mx-10">
+      <h4 class="font-semibold">Popular Ringtones</h4>
+      <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
+        <div class="bg-gray-300 rounded p-3 mt-3 sm:w-80">
+          <div class="flex space-x-2">
+            <!-- Left content -->
+            <div>
+              <svg
+                width="42"
+                height="42"
+                viewBox="0 0 42 42"
+                xmlns="http://www.w3.org/2000/svg"
+                class="text-rose-500 fill-current"
+              >
+                <path
+                  d="M16.625 28.875L28.875 21L16.625 13.125V28.875ZM21 38.5C18.5792 38.5 16.3042 38.0403 14.175 37.121C12.0458 36.2017 10.1938 34.9551 8.61875 33.3813C7.04375 31.8063 5.79717 29.9542 4.879 27.825C3.96083 25.6958 3.50117 23.4208 3.5 21C3.5 18.5792 3.95967 16.3042 4.879 14.175C5.79833 12.0458 7.04492 10.1938 8.61875 8.61875C10.1938 7.04375 12.0458 5.79717 14.175 4.879C16.3042 3.96083 18.5792 3.50117 21 3.5C23.4208 3.5 25.6958 3.95967 27.825 4.879C29.9542 5.79833 31.8063 7.04492 33.3813 8.61875C34.9563 10.1938 36.2034 12.0458 37.1227 14.175C38.0421 16.3042 38.5012 18.5792 38.5 21C38.5 23.4208 38.0403 25.6958 37.121 27.825C36.2017 29.9542 34.9551 31.8063 33.3813 33.3813C31.8063 34.9563 29.9542 36.2034 27.825 37.1227C25.6958 38.0421 23.4208 38.5012 21 38.5ZM21 35C24.9083 35 28.2187 33.6437 30.9312 30.9312C33.6437 28.2187 35 24.9083 35 21C35 17.0917 33.6437 13.7812 30.9312 11.0687C28.2187 8.35625 24.9083 7 21 7C17.0917 7 13.7812 8.35625 11.0687 11.0687C8.35625 13.7812 7 17.0917 7 21C7 24.9083 8.35625 28.2187 11.0687 30.9312C13.7812 33.6437 17.0917 35 21 35Z"
+                />
+              </svg>
+            </div>
+            <!-- Right content -->
+            <div class="space-y-2 flex-1 relative">
+              <span
+                class="absolute right-0 bg-green-300 px-3 py-1 text-xs font-semibold uppercase white"
+                >Tamil</span
+              >
+              <h4 class="font-semibold">Leo Ringtone (Bad)</h4>
+              <small>Uploaded by Anbuselvan</small>
+              <p class="text-xs">
+                <strong>Music:</strong>
+                <a href="#" class="hover:text-rose-600">Anirudh Ravichandran</a>
+              </p>
+              <div class="pt-1">
+                <span class="px-2 py-1 rounded text-sm font-medium bg-rose-200"
+                  >25 Sec</span
+                >
+                <span class="px-2 py-1 rounded text-sm font-medium bg-rose-200"
+                  >1.5MB</span
+                >
+                <span class="px-2 py-1 rounded text-sm font-medium bg-rose-200"
+                  >250+</span
+                >
+              </div>
+            </div>
+          </div>
+          <button
+            class="px-4 py-1 rounded bg-green-600 hover:bg-green-700 w-full mt-4 text-sm text-white font-semibold"
+          >
+            Download Now
+          </button>
+        </div>
+        <div class="bg-gray-300 rounded p-3 mt-3 sm:w-80">
+          <div class="flex space-x-2">
+            <!-- Left content -->
+            <div>
+              <svg
+                width="42"
+                height="42"
+                viewBox="0 0 42 42"
+                xmlns="http://www.w3.org/2000/svg"
+                class="text-rose-500 fill-current"
+              >
+                <path
+                  d="M16.625 28.875L28.875 21L16.625 13.125V28.875ZM21 38.5C18.5792 38.5 16.3042 38.0403 14.175 37.121C12.0458 36.2017 10.1938 34.9551 8.61875 33.3813C7.04375 31.8063 5.79717 29.9542 4.879 27.825C3.96083 25.6958 3.50117 23.4208 3.5 21C3.5 18.5792 3.95967 16.3042 4.879 14.175C5.79833 12.0458 7.04492 10.1938 8.61875 8.61875C10.1938 7.04375 12.0458 5.79717 14.175 4.879C16.3042 3.96083 18.5792 3.50117 21 3.5C23.4208 3.5 25.6958 3.95967 27.825 4.879C29.9542 5.79833 31.8063 7.04492 33.3813 8.61875C34.9563 10.1938 36.2034 12.0458 37.1227 14.175C38.0421 16.3042 38.5012 18.5792 38.5 21C38.5 23.4208 38.0403 25.6958 37.121 27.825C36.2017 29.9542 34.9551 31.8063 33.3813 33.3813C31.8063 34.9563 29.9542 36.2034 27.825 37.1227C25.6958 38.0421 23.4208 38.5012 21 38.5ZM21 35C24.9083 35 28.2187 33.6437 30.9312 30.9312C33.6437 28.2187 35 24.9083 35 21C35 17.0917 33.6437 13.7812 30.9312 11.0687C28.2187 8.35625 24.9083 7 21 7C17.0917 7 13.7812 8.35625 11.0687 11.0687C8.35625 13.7812 7 17.0917 7 21C7 24.9083 8.35625 28.2187 11.0687 30.9312C13.7812 33.6437 17.0917 35 21 35Z"
+                />
+              </svg>
+            </div>
+            <!-- Right content -->
+            <div class="space-y-2 flex-1 relative">
+              <span
+                class="absolute right-0 bg-green-300 px-3 py-1 text-xs font-semibold uppercase white"
+                >Tamil</span
+              >
+              <h4 class="font-semibold">Leo Ringtone (Bad)</h4>
+              <small>Uploaded by Anbuselvan</small>
+              <p class="text-xs">
+                <strong>Music:</strong>
+                <a href="#" class="hover:text-rose-600">Anirudh Ravichandran</a>
+              </p>
+              <div class="pt-1">
+                <span class="px-2 py-1 rounded text-sm font-medium bg-rose-200"
+                  >25 Sec</span
+                >
+                <span class="px-2 py-1 rounded text-sm font-medium bg-rose-200"
+                  >1.5MB</span
+                >
+                <span class="px-2 py-1 rounded text-sm font-medium bg-rose-200"
+                  >250+</span
+                >
+              </div>
+            </div>
+          </div>
+          <button
+            class="px-4 py-1 rounded bg-green-600 hover:bg-green-700 w-full mt-4 text-sm text-white font-semibold"
+          >
+            Download Now
+          </button>
+        </div>
+        <div class="bg-gray-300 rounded p-3 mt-3 sm:w-80">
+          <div class="flex space-x-2">
+            <!-- Left content -->
+            <div>
+              <svg
+                width="42"
+                height="42"
+                viewBox="0 0 42 42"
+                xmlns="http://www.w3.org/2000/svg"
+                class="text-rose-500 fill-current"
+              >
+                <path
+                  d="M16.625 28.875L28.875 21L16.625 13.125V28.875ZM21 38.5C18.5792 38.5 16.3042 38.0403 14.175 37.121C12.0458 36.2017 10.1938 34.9551 8.61875 33.3813C7.04375 31.8063 5.79717 29.9542 4.879 27.825C3.96083 25.6958 3.50117 23.4208 3.5 21C3.5 18.5792 3.95967 16.3042 4.879 14.175C5.79833 12.0458 7.04492 10.1938 8.61875 8.61875C10.1938 7.04375 12.0458 5.79717 14.175 4.879C16.3042 3.96083 18.5792 3.50117 21 3.5C23.4208 3.5 25.6958 3.95967 27.825 4.879C29.9542 5.79833 31.8063 7.04492 33.3813 8.61875C34.9563 10.1938 36.2034 12.0458 37.1227 14.175C38.0421 16.3042 38.5012 18.5792 38.5 21C38.5 23.4208 38.0403 25.6958 37.121 27.825C36.2017 29.9542 34.9551 31.8063 33.3813 33.3813C31.8063 34.9563 29.9542 36.2034 27.825 37.1227C25.6958 38.0421 23.4208 38.5012 21 38.5ZM21 35C24.9083 35 28.2187 33.6437 30.9312 30.9312C33.6437 28.2187 35 24.9083 35 21C35 17.0917 33.6437 13.7812 30.9312 11.0687C28.2187 8.35625 24.9083 7 21 7C17.0917 7 13.7812 8.35625 11.0687 11.0687C8.35625 13.7812 7 17.0917 7 21C7 24.9083 8.35625 28.2187 11.0687 30.9312C13.7812 33.6437 17.0917 35 21 35Z"
+                />
+              </svg>
+            </div>
+            <!-- Right content -->
+            <div class="space-y-2 flex-1 relative">
+              <span
+                class="absolute right-0 bg-green-300 px-3 py-1 text-xs font-semibold uppercase white"
+                >Tamil</span
+              >
+              <h4 class="font-semibold">Leo Ringtone (Bad)</h4>
+              <small>Uploaded by Anbuselvan</small>
+              <p class="text-xs">
+                <strong>Music:</strong>
+                <a href="#" class="hover:text-rose-600">Anirudh Ravichandran</a>
+              </p>
+              <div class="pt-1">
+                <span class="px-2 py-1 rounded text-sm font-medium bg-rose-200"
+                  >25 Sec</span
+                >
+                <span class="px-2 py-1 rounded text-sm font-medium bg-rose-200"
+                  >1.5MB</span
+                >
+                <span class="px-2 py-1 rounded text-sm font-medium bg-rose-200"
+                  >250+</span
+                >
+              </div>
+            </div>
+          </div>
+          <button
+            class="px-4 py-1 rounded bg-green-600 hover:bg-green-700 w-full mt-4 text-sm text-white font-semibold"
+          >
+            Download Now
+          </button>
+        </div>
+        <div class="bg-gray-300 rounded p-3 mt-3 sm:w-80">
+          <div class="flex space-x-2">
+            <!-- Left content -->
+            <div>
+              <svg
+                width="42"
+                height="42"
+                viewBox="0 0 42 42"
+                xmlns="http://www.w3.org/2000/svg"
+                class="text-rose-500 fill-current"
+              >
+                <path
+                  d="M16.625 28.875L28.875 21L16.625 13.125V28.875ZM21 38.5C18.5792 38.5 16.3042 38.0403 14.175 37.121C12.0458 36.2017 10.1938 34.9551 8.61875 33.3813C7.04375 31.8063 5.79717 29.9542 4.879 27.825C3.96083 25.6958 3.50117 23.4208 3.5 21C3.5 18.5792 3.95967 16.3042 4.879 14.175C5.79833 12.0458 7.04492 10.1938 8.61875 8.61875C10.1938 7.04375 12.0458 5.79717 14.175 4.879C16.3042 3.96083 18.5792 3.50117 21 3.5C23.4208 3.5 25.6958 3.95967 27.825 4.879C29.9542 5.79833 31.8063 7.04492 33.3813 8.61875C34.9563 10.1938 36.2034 12.0458 37.1227 14.175C38.0421 16.3042 38.5012 18.5792 38.5 21C38.5 23.4208 38.0403 25.6958 37.121 27.825C36.2017 29.9542 34.9551 31.8063 33.3813 33.3813C31.8063 34.9563 29.9542 36.2034 27.825 37.1227C25.6958 38.0421 23.4208 38.5012 21 38.5ZM21 35C24.9083 35 28.2187 33.6437 30.9312 30.9312C33.6437 28.2187 35 24.9083 35 21C35 17.0917 33.6437 13.7812 30.9312 11.0687C28.2187 8.35625 24.9083 7 21 7C17.0917 7 13.7812 8.35625 11.0687 11.0687C8.35625 13.7812 7 17.0917 7 21C7 24.9083 8.35625 28.2187 11.0687 30.9312C13.7812 33.6437 17.0917 35 21 35Z"
+                />
+              </svg>
+            </div>
+            <!-- Right content -->
+            <div class="space-y-2 flex-1 relative">
+              <span
+                class="absolute right-0 bg-green-300 px-3 py-1 text-xs font-semibold uppercase white"
+                >Tamil</span
+              >
+              <h4 class="font-semibold">Leo Ringtone (Bad)</h4>
+              <small>Uploaded by Anbuselvan</small>
+              <p class="text-xs">
+                <strong>Music:</strong>
+                <a href="#" class="hover:text-rose-600">Anirudh Ravichandran</a>
+              </p>
+              <div class="pt-1">
+                <span class="px-2 py-1 rounded text-sm font-medium bg-rose-200"
+                  >25 Sec</span
+                >
+                <span class="px-2 py-1 rounded text-sm font-medium bg-rose-200"
+                  >1.5MB</span
+                >
+                <span class="px-2 py-1 rounded text-sm font-medium bg-rose-200"
+                  >250+</span
+                >
+              </div>
+            </div>
+          </div>
+          <button
+            class="px-4 py-1 rounded bg-green-600 hover:bg-green-700 w-full mt-4 text-sm text-white font-semibold"
+          >
+            Download Now
+          </button>
+        </div>
+      </div>
+    </section>
+
   </body>
 </html>
